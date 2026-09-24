@@ -22,3 +22,129 @@ main{background:#fffdec;border:3px solid #111;border-radius:21px;box-shadow:6px 
 .addition-rule{height:3px;background:#111;margin:15px 0 15px 152px;border-radius:2px}.addition-carry-row .addition-label{color:#185bce}.addition-carry-row .addition-digit:not(.carry-one){color:#185bce;background:#eaf2ff;border-color:#185bce}.addition-carry-row .addition-digit.column-active:not(.carry-one){background:#ffe348;color:#174aa0}@media(max-width:700px){.addition-rule{margin-left:117px}}
 
 .overflow-rules{background:#e7f8ee}.overflow-rules h2{margin-top:14px}.opposite-rule{background:#ffe34a;border:2px solid #111;border-radius:12px;box-shadow:3px 3px 0 #111;padding:17px 20px;margin:18px 0}.opposite-rule>b{font-size:25px;line-height:1.6}.opposite-rule p{font-size:15px;margin:8px 0 0}.overflow-rule-table{margin:20px 0}.overflow-rule-table td{text-align:left}.overflow-rule-table td:first-child{white-space:nowrap;font-weight:800}.overflow-rule-table tbody tr:first-child{background:#d1f8df}@media(max-width:700px){.opposite-rule{padding:14px}.opposite-rule>b{font-size:21px}.overflow-rule-table td,.overflow-rule-table th{padding:9px;font-size:14px}}
+
+/* Responsive classroom layouts: phone portrait, phone landscape and tablets. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0}
+header,.shell,footer{width:calc(100% - 40px);max-width:1160px;margin-left:auto;margin-right:auto}
+main,.card,.grid>*,.three>*,.hex-scene,.hex-detail,.controls>*,.teacher-tip>div{min-width:0}
+.shell,main,.card,.hex-scene,.teach-scene,.bit-scroll{max-width:100%}
+button,input,select{min-height:44px}
+input,select{font-size:16px}
+.controls label{min-width:0;max-width:100%}
+.controls select{width:100%;min-width:0;max-width:100%}
+.controls input{max-width:100%}
+.controls button{white-space:normal}
+nav a{min-height:46px;align-items:center}
+.quiznav{gap:10px}.quiznav button{width:44px;height:44px}
+.equation,.readout,.hex-calculation,.carry-discard>b,.hex-final{overflow-wrap:anywhere}
+.option{min-width:0}.option>span{min-width:0;overflow-wrap:anywhere}
+.responsive-table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.responsive-table table{min-width:0}
+.teach-scene,.bit-scroll,.hex-visual,.responsive-table{overscroll-behavior-x:contain;scrollbar-width:thin;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}
+.scroll-cue{display:block;font-size:14px;font-weight:700;color:#244d78;margin:9px 0;background:#eef5ff;border-left:3px solid #245acd;padding:7px 10px}
+.scroll-cue[hidden]{display:none}
+.bit-scroll-hint{display:none!important}
+.bit-scroll .bits{min-width:480px;gap:9px}
+.bit-weight{padding:9px 2px}
+.weight-value{font-size:18px}.weight-value strong{font-size:25px}
+.hex-visual{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding:24px 4px 16px}
+.hex-group{flex-shrink:0}
+.teach-bit-row{min-width:0}
+.teach-eight{min-width:0}
+.teach-scene .three{min-width:0}
+.reverse-bits{min-width:calc(var(--count) * 33px);grid-template-columns:repeat(var(--count),minmax(27px,1fr));gap:5px}
+.addition-board{min-width:0}
+.addition-row{grid-template-columns:125px 64px repeat(8,minmax(0,1fr));gap:7px}
+.addition-rule{margin-left:132px}
+.short{grid-template-columns:55px minmax(70px,105px) minmax(0,1fr);width:100%}
+.short>span{padding:8px}
+.short .remain{white-space:normal;flex-wrap:wrap;gap:5px}
+@media(min-width:701px) and (max-width:1100px){
+header{padding:17px 20px}.shell{min-height:0}
+nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;padding:4px 5px 10px 0}
+nav a{white-space:normal;text-align:center;font-size:15px}
+main{padding:22px}
+.grid{grid-template-columns:1fr}
+.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end}
+.controls input{width:100%!important}
+.controls>.button{width:100%}
+.addition-row{grid-template-columns:105px 56px repeat(8,minmax(0,1fr));gap:5px}
+.addition-label{font-size:14px}.addition-digit,.addition-extra{font-size:23px}
+.addition-rule{margin-left:110px}
+.teach-row-label{flex-basis:125px}
+}
+@media(max-width:700px){
+header,.shell,footer{width:calc(100% - 24px);margin-left:auto;margin-right:auto}
+header{margin-top:12px;margin-bottom:17px;padding:13px;gap:10px;box-shadow:3px 4px 0 #111}
+.brand{font-size:18px;min-width:0;line-height:1.55}.brand>span:last-child{min-width:0}
+.logo{display:none}.score{flex:none;min-width:65px}
+aside{padding:0}
+nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;overflow:visible;padding:4px 4px 10px 0}
+nav a{justify-content:flex-start;white-space:normal;font-size:14px;padding:10px;gap:7px;min-width:0}
+nav a:last-child{grid-column:1/-1}
+.teacher-tip{margin-right:3px;gap:10px;padding:12px}
+main{margin-right:3px;padding:13px;box-shadow:3px 4px 0 #111}
+h1{font-size:26px;line-height:1.5}h2{font-size:20px;line-height:1.5}
+.card{padding:13px;box-shadow:2px 3px 0 #111;margin-bottom:19px}
+.grid{grid-template-columns:1fr;gap:0}
+.three{grid-template-columns:1fr;gap:11px}
+.stat{display:block;padding:12px}.stat b{margin-top:5px;font-size:25px}.stat small{font-size:13px}
+.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:end}
+.controls label{grid-column:1/-1}
+.controls input{width:100%!important}
+.controls button{width:100%;padding:10px 7px;min-height:46px}
+label,input{max-width:100%}
+.hex-scene{padding:10px}
+.hex-detail{padding:12px;min-height:0}
+.hex-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.hex-stages span{font-size:14px;padding:7px}
+.hex-current-group>b{font-size:18px}
+.hex-weight-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.hex-weight-row>em{display:none}
+.hex-weight-row>span{padding:8px 3px;text-align:center;font-size:16px}
+.hex-weight-row small{font-size:14px}
+.hex-calculation{font-size:18px;line-height:1.9}
+.hex-final{font-size:20px}
+.teach-bit-row{display:block;min-width:0;margin:16px 0}
+.teach-row-label{display:block;font-size:14px;margin-bottom:9px}
+.teach-eight{width:100%;max-width:none;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px}
+.teach-digit{font-size:clamp(16px,4vw,23px);min-height:36px;border-radius:6px}
+.teach-scene .three{grid-template-columns:1fr;min-width:0}
+.reverse-bits{min-width:calc(var(--count) * 29px);grid-template-columns:repeat(var(--count),minmax(25px,1fr));gap:4px}
+.addition-board{min-width:0;padding-right:2px}
+.addition-row{grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin:15px 0}
+.addition-label{grid-column:1/-1;margin-bottom:3px;font-size:14px}
+.addition-head>span:first-child{display:none}
+.addition-head b{font-size:12px;line-height:1.5}
+.addition-digit,.addition-extra{min-height:36px;font-size:clamp(16px,4vw,23px);border-radius:5px}
+.addition-digit.carry-one.column-active{outline-width:2px;outline-offset:0}
+.addition-digit.column-active{outline-width:1px;outline-offset:0}
+.addition-rule{margin:14px 0;height:3px}
+.addition-key{gap:8px;font-size:14px}
+.addition-key>span{width:100%}
+.carry-action{font-size:18px;padding:12px}
+.carry-discard>b{font-size:19px}
+.overflow-rule-table td:first-child{white-space:normal}
+td,th{padding:8px;font-size:14px}
+.opposite-rule>b{font-size:21px}
+.readout{font-size:19px;letter-spacing:1px}
+.short{grid-template-columns:42px minmax(65px,85px) minmax(0,1fr);font-size:20px}
+.short>span{padding:8px 5px}
+.short .remain{font-size:17px}
+footer{font-size:13px;padding-bottom:24px}
+}
+@media(max-width:370px){
+header,.shell,footer{width:calc(100% - 18px)}
+main{padding:10px}.card{padding:11px}.hex-scene{padding:8px}
+.brand{font-size:16px}
+.addition-row{gap:3px}.addition-digit,.addition-extra{border-width:1.5px}
+.controls{grid-template-columns:1fr}.controls label{grid-column:auto}
+}
+@media(max-height:600px) and (orientation:landscape){
+header{min-height:74px;margin-top:10px;padding:10px 16px}
+.teacher-tip{padding:10px 15px;margin-bottom:17px}
+.controls{display:flex;flex-wrap:wrap;gap:12px}.controls label{flex:1 1 160px}
+.controls>.button{width:auto;flex:0 1 auto}
+}
+@media(pointer:coarse){button,.option,select{min-height:48px}.bit button{min-width:44px;min-height:52px}.quiznav button{width:46px;height:46px}}
